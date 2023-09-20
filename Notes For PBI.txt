@@ -218,7 +218,23 @@ pass        : 0000
        معلومه : كل workspace تقدر ت createلها    app  واحد فقط   + ال  MY WORKSPACE ملهاش app  اصلا .... وعشان تعمل appلازم ت create work space  جديده و يكون فيها طبعا ال reports  اللي عاوز تحط في ال app
                       ويميل novypro متقدرش ت create workspace فيها ... ف بالتالي معندعهاش غير my workspace ف بالتالي متقدر تستخدم ال feature بتاعه ال APP فيها .... بس تقدر تعمل كدا في ايميل الجامعه لانك تقدر ت create فيه work space
 
-41-  
+41-  ال  scorecard عباره عن شويه metrics  .. يعني اي .؟ ال metric هي اكنها حاله تتبع فقط .. بتديها current value و بتقولها ال  target value بتاعتك و بعدين  يا تحدد انت ال status 
+يا تقوله لحد يوم كذا  due day لو كانت ال value بتاعه ال current اتغيرت لتصبح نص -ربع - اكبر -اصغر -نسبه مئويه .... اي case عادي ... لو حصل دا خلي ال status بتاعتك كذا ..  ولو حصل كذا خلي ال status بتاعتك كذا و تقددر تحط كذا case عادي 
+طب جميل ... هنستفييد ب دا في اي ؟  لو عاوز تتابع  مثلا ان عدد الاوردرز وصل ل target  بتاعك ولا لا ف تقدر تديله عدد الاوردر  manual  او تقوله خاته من داتا - report و تديله ال card  بتاع عدد ال orders ... و تحط ال status بتعتك عادي ..اما ثابته ..او كذا status حسب كل case
+ولما تخلص .. تقدر تروح للmetric و من ال 3 نقط تختار  see details  عشان تشوفق تطور القيم من ال current الي الان ... او تختار follow metric عشان لما تفتح ال powerbi serives وتروح ل metric tab هتلاقي دي في ال follow   ... وتقدر تعمل submetric of metric  ...اهميتها في انك بتحدد شويه metrics يكوتوا مع بعض فقط ..أنما مش بتأثر علي حسابات او شئ اخر 
+
+42- ال streaming dataset هي ال real time dataset الداتا اللي بتتغير في ثانيه او اقل ... و دي ببساطه بنعملها بال power bi services و هي limited الكولمن بتوعها  integer , text ,boolean  و بنخلي ال historical data  تبقي  on  عشان تسجل الداتا القديمه برضوا 
+        ثم تقدر تستخدم الداتا دي علي 3 اشكال ..اما  api  او azure او  powershell ولما تخلص تقدر تسيف ومن ثم تعمل  ريبورت علي ال powerbi serviceاو ال power bi desktop باستخدام الداتا سيت دي  ... لكن  لو عملتها باستخدام ال services مش هتقدر تعمل measures او حتي ت connect علي داتا جديده مع الداتا دي ... ودا عكس ال desktop اللي تقدر تعمل measures عادي ..و كمان تقدر ت connect  علي داتا جديده ..زي ما قولنا قبل كاد عن طريق تحويل ال نوع ال  mode connection من live mode  الي direct query  
+        ملحوظه : لو الداتا عماله تتغير .. ف لازم تعمل ريقريش  لل report عشان التاثير بتاع التغيير يبان ... طب لو عاوز التاثير يبان من غير ما اعمل refresh .... خلي ال report كله يبقي  pin to dashboard و ال dashboard هتتاثر بالتغيير من غير ما تعمل refresh 
+
+43-  ال streaming dataflow هي الreal time dataflow  الداتا اللي بتتغير في ثانيه او اقل ... ودي ببساطه بنعملها بال powerbi services ولكن متاحه فقط للاكونت ال permuim و كمان في ال workspace الواحده يا تعمل streaming dataflow يا تعمل dataflow عاديه ... انما الاتنين مع بعض في workspace    واحده غير مقبول  ....  و جوه ال streaming dataflow تقدر ت connect علي الداتا ب 3 طرق فقط ... اما   EVENT HUB  OR  IOTHUB OR AZUREBOB ... و ال 3 دول معنديش اكسيس عليهم ولا حد زانون كان معاه اكونت 
+ المهم انك بعد ما تختار الداتا .. بيجيبلك ال COLUMN بتاعتهم و تقدر تعمل ال TRANSFORM,ATIONS ببتاعتك زي ما انت عاوز ثم اخر مرحله وهي ال OUTPUT ودي بتختار اسم الداتا بعد التعديل ... وكل دا بيبيقي عباره عن Cards of steps لما بتختار ال step المعينه بيظهرلك card و بتوصله للcard اللي بعده ...  حسب عاوز الخطوات بتاعتك ماشيه ازاي 
+
+وتذكر زي ما قولنا ان : ال dataflow الداتا اللي بتقدر تعمل بيها transformation   انما ال dataset دي الداتا model اي بمعني انك تقدر تعمل بيها transformation , relatioship ,meausre,and so on 
+
+44- (Demo24)في ال SQL لما بتيجي تعمل new login ... لازم تدي للuser ..access علي الداتا بيز اللي انت عاوز تخليه يتعامل معاه ... وكمان لازن تقوله يقدر يعمل اي عليها .. يكتب فقط ؟ يكتب و يقرا فقط؟ ولا اي الاوبشن بالظبط اللي عاوزها 
+      userMAPPING and select databases and select accessibility on them   security RightClick -> new Login  -> EnterNAME,PASSWORD you need to use as a authorization not windows , uncheck policy privacy to make it easy -> go to tab 
+
 
 
 
