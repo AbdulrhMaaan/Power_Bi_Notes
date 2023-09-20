@@ -236,7 +236,7 @@ pass        : 0000
 وتذكر زي ما قولنا ان : ال dataflow الداتا اللي بتقدر تعمل بيها transformation   انما ال dataset دي الداتا model اي بمعني انك تقدر تعمل بيها transformation , relatioship ,meausre,and so on 
 
 44- (Demo24)في ال SQL لما بتيجي تعمل new login ... لازم تدي للuser ..access علي الداتا بيز اللي انت عاوز تخليه يتعامل معاه ... وكمان لازن تقوله يقدر يعمل اي عليها .. يكتب فقط ؟ يكتب و يقرا فقط؟ ولا اي الاوبشن بالظبط اللي عاوزها 
-      userMAPPING and select databases and select accessibility on them   security RightClick -> new Login  -> EnterNAME,PASSWORD you need to use as a authorization not windows , uncheck policy privacy to make it easy -> go to tab 
+      security RightClick -> new Login  -> EnterNAME,PASSWORD you need to use as a authorization not windows , uncheck policy privacy to make it easy -> go to tab userMAPPING and select databases and select                                                                                                                                                                      accessibility on them
 
 
 
