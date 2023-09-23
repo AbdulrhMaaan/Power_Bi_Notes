@@ -1,6 +1,3 @@
-# Power_Bi_Notes
-
-
 Note PowerBi
 
 ا- أسماء الtables تكون جمع 
@@ -214,6 +211,8 @@ pass        : 0000
 39- اي الفرق بين ال dashboard و  Report اولا : الdashboard زي ما قولنا اقدر احط فيه صوره و فيديو  و textو web content  ... اه نقدر نحط في ال report .. text و image بس باقي الحاجات لا 
     كمان ال dashboard ممكن يكون كذا حته من كذا ريبورت و دا بيديك الاريحيه انك تجمع معومات معينه  من كذا ريبورت مختلف   + ال dashboard بيبقي صفحه واحده فقططط
 
+    معلومه مهمه : بعد كدا لما بتعمل اي ريبورت او بت  uplaod  اي  report ف هو بيعمل ال reportm, data و كمان بيعملك dashboardبنفس اسم ال report بس بيبقي فاضى 
+
   40-  ال power bi services APP  و دي ببساطه معناها انك تعمل لل Workspace بتاعتك  APP  .. طب هتستفيد بيه ب اي ؟ ببساطه ال APP دا هدفه انك اكنك بتعمل Workspace فيها شويه reports , links ,dashboard,data بس ناس معينه تقدر تتطلع عليها 
        ومش لازم تحط في ال app كل الحاجات اللي في ال workspace  .... انت بتحط فقط الحاجات اللي عاوز الناس المعينه اللي هتديها اكسيس انها تشوفها  ,  كمان تقدر تحدد الناس اللي هتشوف ال app تقدر تaccess اي بالظبط .. يعني تعدل حاجه ولا تبص بس وكدا يعني
         وبيبقي فيه لينك تقدر تديه للناس عشان تفتحه و تقدر تشوف ال app بتاعك ..ادا لو ليهم accesss علي ال app  يعني  
@@ -235,14 +234,36 @@ pass        : 0000
 
 وتذكر زي ما قولنا ان : ال dataflow الداتا اللي بتقدر تعمل بيها transformation   انما ال dataset دي الداتا model اي بمعني انك تقدر تعمل بيها transformation , relatioship ,meausre,and so on 
 
-44- (Demo24)في ال SQL لما بتيجي تعمل new login ... لازم تدي للuser ..access علي الداتا بيز اللي انت عاوز تخليه يتعامل معاه ... وكمان لازن تقوله يقدر يعمل اي عليها .. يكتب فقط ؟ يكتب و يقرا فقط؟ ولا اي الاوبشن بالظبط اللي عاوزها 
-      security RightClick -> new Login  -> EnterNAME,PASSWORD you need to use as a authorization not windows , uncheck policy privacy to make it easy -> go to tab userMAPPING and select databases and select                                                                                                                                                                      accessibility on them
+44- في (Demo24) ال SQL لما بتيجي تعمل new login ... لازم تدي للuser ..access علي الداتا بيز اللي انت عاوز تخليه يتعامل معاه ... وكمان لازن تقوله يقدر يعمل اي عليها .. يكتب فقط ؟ يكتب و يقرا فقط؟ ولا اي الاوبشن بالظبط اللي عاوزها 
+      userMAPPING and select databases and select accessibility on them   security RightClick -> new Login  -> EnterNAME,PASSWORD you need to use as a authorization not windows , uncheck policy privacy to make it easy -> go to tab 
 
 
+45-  ال Deployment Pipline هو عباره عن طريقه لتنظيم عرض و رؤيه ال reports او الداتا بكل انواعها  او ال dashboard او اي حاجه ... عن طريق انك بتcreate premuim workspace و تحط فيها اي حاجه من اللي ذكرناهم ... ثم تدوس ع  deploymeny pipline
+        بعدين هيبقي عندك 3 مراحل ... زي مراحل ال deployment life cycle   وهما ال  devoplment , test , production  و بتختار ال اول workspace وهي ال developent  وتبعت الكلام دا ل  test وهو لوحده بيcreate workspace و ينقل فيها الحاجات اللي في ال workspace بتاعه development
+        وهكذا من ال test workspace الي ال  production workspace  ... واي تغيير بتعمل في ال development بيحس بيه ال 2 working space االتانيين ...بس مش بيتغيروا لوحدهم ...لازم انت تغيرهم 
+        كمان في ال مرحله ال  test and productionworkspace بتقدر انك تختارم ن فوق حاجه اسمها ...Deployment Rules و تختار بقي ان مثلا ال data source الفلانيه لو هي اتفتحت من خلال ال workspace اللي اسمها production يبقي ال connenction  بتاعها كذا ولو غير كدا يبقي connecttion       بتاعها كذا .... طب دا اهميته في اي ؟ 
+   ببساطه لو انت شغال ع حاجه و عاوز لما تخلص تبعتها لتيم ال test ف هتبعتهاله في ا ل workspace اللي اسمها test مثلا ... و عاوز لما ال تيم يخلص تيست يبعتها ل الuser اللي هيشوف الحاجه في ال workapsce اللي اسمها  Porduction
+   كمان مثلا انت عاوز اليوزر يتعامل مع داتا بيز معينه .. فيها امثله و نماذج معينه ... ف تخليه ي conncet علي سيرفر معين او داتا بيز معينه ممثلا .. في ال  production workspace .... انما انت عمال تعدل في الداتا في داتابيز جديده او في سيرفر تاني ..ف ممكن تاكونت عليها في workspacr اللي اسمها developmentفقط 
+===و بالمختصر المفيد ... ال development Workspace فيها حاجتك ... وال test workspace فيها حاجتك بعد ما خلصتها و عاوز حد يتيست عليها ... وال deployment workspace فيها حاجتك بعد ما تيم التيست عمل عليها تيست .. ودي مرحله اللي ال user بيجرب بقي الدنيا
 
+46- فيه طريقتين لو عاوز تعمل publlish يا اما تستخدم ال power bi desktop و ساعتها هتكون بت publish  علي ال power bi services ... يا اما تستخدم ال  ودي بتpublish علي ال power bi report server 
+         ف كل اللي هتحتاج تنزله هو  power bi report server و تعمله configration وبينزل معاه نسخه ال powerbi desktop RS (Report server) اللي بيبقي علي شكل powerbi desktop (version + Year)  بتجيبهم عادي من ال product في صفحه ال power bi    و لازم يكونوا الاتنين نفس الفيرجن
 
+       و ببساطه ال  power bi report server  ... دي tool بتستخدم ال  server بتاعه ال machine بتاعتك انه يرفع عليها
+       يعني ممكن نقول ان ال powerbi service هو ال cloud deployment و ان ال power bi report server هو ال  on premisis  or  hosted cloud ... 
+        كمان ال power bi service ليه مميزات اكتر شويه عن power bi report server ... زي ان التاني مش متاحه فيه  composite mode , Q/A , Dashboard,connect to powerbi dataset , create reports using browser وحاجات تانيه كثيره
+         وعشان تستخدم ال power bi report server  لازم يكون عندك حاجه من ال 4 دول 
+        اما اكونت premuim  (اكونت الجامعه) او تسخدمه لمده 180 يوم  او يبقي عندك product key او يبقي عندك اكونت      sql server enterprice edition +   software assurance  
+       طب جميل ..امتي استخدم powerbi desktop وامتي POWERBI DESKTOP(version + year)
+       زي ما قولنا ... ال powerbi desktop  لو هتبابلش علي server  بتاع ال power bi   = power bi server 
+        التاني POWERBI DESKTOP(version + year) لو هت publish علي ال سيرفر بتاعك انت ,.. و قوه السيرفر من قوه جهازك ..سواء في trasnfare  حاجه او ما شابه  
+       كمان ال power bi service ليه مميزات اكتر شويه عن power bi report server ... زي ان التاني مش متاحه فيه  composite mode , dynamic m query, Q/A , Dashboard,connect to powerbi dataset , create reports using browser وحاجات تانيه كثيره
+       اكتب ال فرق بين  powerbi service و ال powerbi report server عشان تشوف الحاجات التانيه المختلفه                   
 
+47- ال power bi service بيحصله ابديت كل شهر .... ال power bi report serverبيحصله ابديت 3 مرات في السنه ... شهؤ 1 و 5 و 9 
 
+48- كدا ال POWERBI DESKTOP , POWERBI BUILDER  بي PUSH علي ال POWERBI SERVER
+             و ال POWERBI DESKTOP(version + year)  بي PUSH علي ال POWER BI REPORT SERVER
 
 
 
